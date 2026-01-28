@@ -1,145 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morning Action Plan - January 28, 2026</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
-        .card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        h1 { color: #1a1a1a; margin-bottom: 5px; font-size: 24px; }
-        h2 { color: #333; border-bottom: 2px solid #0066cc; padding-bottom: 8px; margin-top: 0; font-size: 18px; }
-        .date { color: #666; font-size: 14px; margin-bottom: 20px; }
-        .weather { font-size: 16px; color: #444; }
-        .priority-high { border-left: 4px solid #dc3545; }
-        .priority-med { border-left: 4px solid #ffc107; }
-        .priority-low { border-left: 4px solid #28a745; }
-        .action-link { display: inline-block; background: #0066cc; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 500; margin: 5px 5px 5px 0; }
-        .action-link:hover { background: #0052a3; }
-        .action-link.secondary { background: #6c757d; }
-        .tag { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; margin-right: 5px; }
-        .tag-revenue { background: #d4edda; color: #155724; }
-        .tag-deadline { background: #f8d7da; color: #721c24; }
-        .tag-relationship { background: #cce5ff; color: #004085; }
-        .urgent { background: #fff3cd; padding: 12px; border-radius: 4px; margin-bottom: 15px; }
-        .context { color: #666; font-size: 14px; margin-top: 8px; }
-        ul { margin: 10px 0; padding-left: 20px; }
-        li { margin: 8px 0; }
-        table { width: 100%; border-collapse: collapse; }
-        th { text-align: left; padding: 12px 8px; background: #f8f9fa; border-bottom: 2px solid #dee2e6; font-size: 14px; }
-        td { padding: 12px 8px; border-bottom: 1px solid #dee2e6; font-size: 14px; }
-        a { color: #0066cc; }
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            .card { padding: 15px; }
-            .action-link { display: block; text-align: center; margin: 8px 0; }
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; padding: 20px; line-height: 1.5; }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 { font-size: 1.1em; color: #666; margin-bottom: 20px; }
+        h2 { font-size: 1em; color: #333; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 1px solid #ddd; }
+        .card { background: white; border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+        .card-title { font-weight: 600; font-size: 1em; }
+        .badge { font-size: 0.75em; padding: 2px 8px; border-radius: 12px; background: #e8f5e9; color: #2e7d32; }
+        .badge.urgent { background: #fff3e0; color: #e65100; }
+        .card-body { font-size: 0.9em; color: #666; }
+        .card-actions { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 500; }
+        .btn-primary { background: #1a73e8; color: white; }
+        .btn-secondary { background: #f1f3f4; color: #333; }
+        .meta { font-size: 0.8em; color: #999; margin-top: 8px; }
+        .glance { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+        .glance-item { background: white; padding: 12px; border-radius: 8px; font-size: 0.85em; }
+        .glance-item strong { display: block; color: #333; }
+        .glance-item span { color: #666; }
+        table { width: 100%; font-size: 0.85em; }
+        td { padding: 6px 0; border-bottom: 1px solid #eee; }
+        .channel { font-size: 0.75em; color: #999; text-transform: uppercase; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Tuesday, January 28, 2026</h1>
+        
+        <div class="glance">
+            <div class="glance-item">
+                <strong>🌡️ Weather</strong>
+                <span>20°F (feels 9°F) - Cold, overcast</span>
+            </div>
+            <div class="glance-item">
+                <strong>📅 Today</strong>
+                <span>Nothing scheduled</span>
+            </div>
+            <div class="glance-item">
+                <strong>📅 Tomorrow</strong>
+                <span>10:30 AM - Ace Hotel with Nora</span>
+            </div>
+            <div class="glance-item">
+                <strong>⚠️ Urgent</strong>
+                <span>Perplexity + Slack payment failures</span>
+            </div>
+        </div>
 
-<h1>Morning Action Plan</h1>
-<p class="date">Tuesday, January 28, 2026</p>
+        <h2>1. Kelley Danek - Website Proposal</h2>
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">💰 $3,600-$6,250</span>
+                <span class="badge">Ready to Send</span>
+            </div>
+            <div class="card-body">Website refresh for Cafe Red + Sapsuckers. Proposal complete.</div>
+            <div class="card-actions">
+                <a href="https://mail.google.com/mail/u/0/#drafts?compose=19c06172be7d7abb" class="btn btn-primary">Open Email Draft</a>
+                <a href="https://docs.google.com/document/d/1JSNSs8gF6ptQwa0Eba4g_oHdhOu2q2vJqWg2GPOOrgI/edit?usp=sharing" class="btn btn-secondary">View Proposal</a>
+            </div>
+            <div class="meta">To: kjdanek@aol.com | From: BStrat</div>
+        </div>
 
-<div class="card">
-    <h2>Today at a Glance</h2>
-    <p class="weather"><strong>Weather:</strong> 20°F (feels 9°F) - Cold, overcast</p>
-    <p><strong>Today:</strong> Nothing scheduled</p>
-    <p><strong>Tomorrow:</strong> 10:30 AM - Ace Hotel with Nora</p>
-    <div class="urgent">
-        <strong>Urgent:</strong> Perplexity + Slack payment failures
+        <h2>2. Emma Burns - Testing Visits</h2>
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">🗓️ 13 days to Feb 10</span>
+            </div>
+            <div class="card-body">Schedule Pincast location testing at Intrepid. Emma available Mon/Wed/Fri.</div>
+            <div class="card-actions">
+                <a href="https://mail.google.com/mail/u/0/#drafts?compose=19c0618871a528a6" class="btn btn-primary">Open Email Draft</a>
+            </div>
+            <div class="meta">To: eburns@intrepidmuseum.org | From: Pincast</div>
+        </div>
+
+        <h2>3. Jan (Florida) - Voice + Photos</h2>
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">🗓️ 13 days to Feb 10</span>
+            </div>
+            <div class="card-body">Get author voice recording and photos for Navigator's Letter experience.</div>
+            <div class="card-actions">
+                <a href="https://mail.google.com/mail/u/0/#drafts?compose=19c06188859fd606" class="btn btn-primary">Open Email Draft</a>
+            </div>
+            <div class="meta">To: alaskajan@bellsouth.net | From: Pincast</div>
+        </div>
+
+        <h2>4. Britt Gage Follow-up</h2>
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">🤝 Exploratory</span>
+            </div>
+            <div class="card-body">Met Jan 14. Follow-up ready.</div>
+            <div class="card-actions">
+                <a href="https://mail.google.com/mail/u/0/#drafts?compose=19c06188b44b0a94" class="btn btn-primary">Open Email Draft</a>
+            </div>
+            <div class="meta">To: britt@weofalltrades.com | From: Pincast</div>
+        </div>
+
+        <h2>5-8. LinkedIn Messages</h2>
+        <div class="card">
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <td><strong>Simon Yu</strong></td>
+                        <td class="channel">LinkedIn</td>
+                        <td><a href="https://docs.google.com/document/d/17o0S3d5jYq3d1O2nSpVNX-IiusDdmJ_NaVZaaBgA9HY/edit" class="btn btn-secondary">View Draft</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Laurel Carpenter</strong></td>
+                        <td class="channel">LinkedIn</td>
+                        <td><a href="https://docs.google.com/document/d/1N2386lgkFEz2QEwh-Y0Z7FcfWSu52VnHqmwegFaK0C8/edit" class="btn btn-secondary">View Draft</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emilio Di Marco</strong></td>
+                        <td class="channel">LinkedIn</td>
+                        <td><a href="https://docs.google.com/document/d/1KSdWvjefQT39WIXnrnajyaNsp9K_aTRzqGTB2xee19M/edit" class="btn btn-secondary">View Draft</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ian Petersen</strong></td>
+                        <td class="channel">LinkedIn</td>
+                        <td><a href="https://docs.google.com/document/d/1rtI9Kw4wDG57-gvr8TlGTA6i27f_SDIjl4C-epx0RKE/edit" class="btn btn-secondary">View Draft</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="meta">Note: LinkedIn messages need to be sent manually (copy from drafts)</div>
+        </div>
+
+        <h2>This Week</h2>
+        <div class="card">
+            <table>
+                <tr><td><strong>Wed 10:30 AM</strong></td><td>Ace Hotel - Nora</td></tr>
+                <tr><td><strong>Sun 9:00 AM</strong></td><td>Community Manager Meetup</td></tr>
+                <tr><td><strong>Sun 1:00 PM</strong></td><td>J.W. Weekly</td></tr>
+                <tr><td><strong>Mon 2:30 PM</strong></td><td>NYU Standup</td></tr>
+            </table>
+        </div>
+
+        <h2>Overdue Tasks</h2>
+        <div class="card">
+            <ul style="margin-left: 20px; color: #666; font-size: 0.9em;">
+                <li>Call NYS Tax Dept (Jan 5)</li>
+                <li>Shut down advisory: Sarah, Dan, Taylor</li>
+                <li><a href="https://perplexity.ai/settings">Fix Perplexity payment</a></li>
+                <li><a href="https://slack.com/billing">Fix Slack payment</a></li>
+                <li>File back taxes 2022, 2023</li>
+            </ul>
+        </div>
+
+        <h2>Summary</h2>
+        <div class="card">
+            <div class="card-body">
+                <strong>🔴 High (3):</strong> Kelley proposal, Emma visits, Jan content<br>
+                <strong>🟡 Medium (1):</strong> Britt<br>
+                <strong>🟢 Lower (4):</strong> LinkedIn batch
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="card priority-high">
-    <h2>1. Kelley Danek - Website Proposal</h2>
-    <span class="tag tag-revenue">$2,700-$4,500</span>
-    <span class="tag tag-deadline">Ready to Send</span>
-    <p>Website refresh for Cafe Red + Sapsuckers. Proposal complete.</p>
-    <a class="action-link" href="https://docs.google.com/document/d/1JSNSs8gF6ptQwa0Eba4g_oHdhOu2q2vJqWg2GPOOrgI/edit">Open Proposal</a>
-    <a class="action-link secondary" href="https://docs.google.com/document/d/1e_ovu7OLOnjrhVAXUTRfcCC8jpyLnW22xbs90HZ43_4/edit">View Email Draft</a>
-    <p class="context">To: kjdanek@aol.com | From: BStrat</p>
-</div>
-
-<div class="card priority-high">
-    <h2>2. Emma Burns - Testing Visits</h2>
-    <span class="tag tag-deadline">13 days to Feb 10</span>
-    <p>Schedule Pincast location testing at Intrepid. Emma available Mon/Wed/Fri.</p>
-    <a class="action-link" href="https://docs.google.com/document/d/1EqqihjjDVqptcB4JBY-fbPv90jlPU7Y2-_BL_qXSgoU/edit">View Email Draft</a>
-    <p class="context">To: eburns@intrepidmuseum.org | From: Pincast</p>
-</div>
-
-<div class="card priority-high">
-    <h2>3. Jan (Florida) - Voice + Photos</h2>
-    <span class="tag tag-deadline">13 days to Feb 10</span>
-    <p>Get author voice recording and photos for Navigator's Letter experience.</p>
-    <a class="action-link" href="https://docs.google.com/document/d/1Hm8nREUvm64ncrAUwsybcpujPpAo7DNREp05XY0ioGc/edit">View Email Draft</a>
-    <p class="context">To: alaskajan@bellsouth.net | From: Pincast</p>
-</div>
-
-<div class="card priority-med">
-    <h2>4. Tommy Mehl - Elian Intro</h2>
-    <span class="tag tag-relationship">Strategic</span>
-    <p>Follow up on Elian intro for geospatial discussion.</p>
-    <a class="action-link" href="https://www.linkedin.com/search/results/people/?keywords=Tommy%20Mehl">Open LinkedIn</a>
-    <a class="action-link secondary" href="https://docs.google.com/document/d/1OKooqf69_QhyOvKc8T-DyB6AK5pMIO1UdN6by8m56AA/edit">View Message</a>
-</div>
-
-<div class="card priority-med">
-    <h2>5. Sriram - Portfolio Company</h2>
-    <span class="tag tag-relationship">VC Connection</span>
-    <p>Following up on portfolio company intro.</p>
-    <a class="action-link" href="https://www.linkedin.com/search/results/people/?keywords=Sriram%20Madhiyalagan">Open LinkedIn</a>
-    <a class="action-link secondary" href="https://docs.google.com/document/d/1_E4pt-YgGLXRA_BVVrwEJmPk9KPfWLc-Xz74jw1vODY/edit">View Message</a>
-</div>
-
-<div class="card priority-med">
-    <h2>6. Britt Gage Follow-up</h2>
-    <span class="tag tag-relationship">Exploratory</span>
-    <p>Met Jan 14. Follow-up ready.</p>
-    <a class="action-link" href="https://docs.google.com/document/d/1KShX-a-Ld90YMCaldWZIQdnEJTZQHHUVMZyAVvncN34/edit">View Email Draft</a>
-    <p class="context">To: britt@weofalltrades.com | From: Pincast</p>
-</div>
-
-<div class="card priority-low">
-    <h2>7-10. LinkedIn Batch</h2>
-    <table>
-        <tr><th>Contact</th><th>Draft</th></tr>
-        <tr><td>Simon Yu</td><td><a href="https://docs.google.com/document/d/17o0S3d5jYq3d1O2nSpVNX-IiusDdmJ_NaVZaaBgA9HY/edit">View</a></td></tr>
-        <tr><td>Laurel Carpenter</td><td><a href="https://docs.google.com/document/d/1N2386lgkFEz2QEwh-Y0Z7FcfWSu52VnHqmwegFaK0C8/edit">View</a></td></tr>
-        <tr><td>Emilio Di Marco</td><td><a href="https://docs.google.com/document/d/1KSdWvjefQT39WIXnrnajyaNsp9K_aTRzqGTB2xee19M/edit">View</a></td></tr>
-        <tr><td>Ian Petersen</td><td><a href="https://docs.google.com/document/d/1rtI9Kw4wDG57-gvr8TlGTA6i27f_SDIjl4C-epx0RKE/edit">View</a></td></tr>
-    </table>
-</div>
-
-<div class="card">
-    <h2>This Week</h2>
-    <table>
-        <tr><th>When</th><th>Event</th></tr>
-        <tr><td>Wed 10:30 AM</td><td>Ace Hotel - Nora</td></tr>
-        <tr><td>Sun 9:00 AM</td><td>Community Manager Meetup</td></tr>
-        <tr><td>Sun 1:00 PM</td><td>J.W. Weekly</td></tr>
-        <tr><td>Mon 2:30 PM</td><td>NYU Standup</td></tr>
-    </table>
-</div>
-
-<div class="card">
-    <h2>Overdue Tasks</h2>
-    <ul>
-        <li><strong>Call NYS Tax Dept</strong> (Jan 5)</li>
-        <li>Shut down advisory: Sarah, Dan, Taylor</li>
-        <li><a href="https://perplexity.ai/settings">Fix Perplexity payment</a></li>
-        <li><a href="https://slack.com/billing">Fix Slack payment</a></li>
-        <li>File back taxes 2022, 2023</li>
-    </ul>
-</div>
-
-<div class="card" style="background: #e8f4e8;">
-    <h2>Summary</h2>
-    <p><strong>High (3):</strong> Kelley proposal, Emma visits, Jan content</p>
-    <p><strong>Medium (3):</strong> Tommy, Sriram, Britt</p>
-    <p><strong>Lower (4):</strong> LinkedIn batch</p>
-</div>
-
 </body>
 </html>
